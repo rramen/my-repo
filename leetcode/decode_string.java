@@ -1,0 +1,3 @@
+class decode_string {
+    
+}
