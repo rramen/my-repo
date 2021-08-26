@@ -12,3 +12,6 @@ public class fib {
         System.out.printf("The 10th fibonacci number is %d%n", f.fibonacci(10));
     }
 };
+
+// upper-bound runtime of O(2^n)
+

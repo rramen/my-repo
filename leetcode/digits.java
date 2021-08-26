@@ -35,7 +35,7 @@ class digits {
     };
 
     public static void main(String[] args){
-        int a = 195;
+        int a = 265;
         digits d = new digits();
         System.out.printf("Our initial number is %d%n", a);
         System.out.printf("The resulting palindrome is %d%n", d.palindrome(a));
