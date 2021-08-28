@@ -15,8 +15,8 @@ class validParentheses {
     public boolean isValid(String S) {
         boolean A = false, B = false, C = false;
         Stack<Character> stack = new Stack<Character>();
-        for(int i = 0; i < S.length(); i++){
-            switch(S.charAt(i)) {
+        for(int i = 0; i < s.length(); i++){
+            switch(s.charAt(i)) {
                 case '[': 
                     A = true;
                     stack.add('A');
@@ -27,16 +27,25 @@ class validParentheses {
                     break;
                 case '(':
                     C = true;
-                    stack.add('C')''
+                    stack.add('C');
                     break;
                 case ']': 
-                    A = false;
+                    if(!stack.isEmpty()){
+                        if(stack.lastElement() != 'A') {return false;}
+                        else{A = false; stack.pop();}
+                    }
                     break;
                 case '}':
-                    B = false;
+                    if(!stack.isEmpty()){
+                        if(stack.lastElement() != 'B') {return false;}
+                        else{B = false; stack.pop();}
+                    }
                     break;
                 case ')':
-                    C = false;
+                    if(!stack.isEmpty()){
+                        if(stack.lastElement() != 'C') {return false;}
+                        else{C = false; stack.pop();}
+                    }
                     break;                    
             }
         }
